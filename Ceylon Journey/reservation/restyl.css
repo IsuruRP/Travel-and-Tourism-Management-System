@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap');
+:root {
+    --orange: #ffa500;
+    --primary-color: #333;
+    --light-grey: #f4f4f4;
+    --table-bg: #f9f9f9;
+    --table-header-bg: #333;
+    --table-header-color: #fff;
+    --btn-hover-bg: rgba(255, 165, 0, 0.8);
+    --error-color: #d9534f;
+    --success-color: #5cb85c;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-grey);
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* General styling for the reservation table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: var(--table-bg);
+    border: 1px solid #ddd;
+    font-size: 1.6rem;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+table th,
+table td {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
+    font-weight: bold;
+}
+
+table td {
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table td.actions {
+    text-align: center;
+}
+
+table td.actions a {
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    margin: 0 5px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.edit-btn {
+    background-color: #f0ad4e;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+    background-color: #ec971f;
+}
+
+.delete-btn {
+    background-color: var(--error-color);
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c9302c;
+}
+
+
+/* Button styling */
+
+button {
+    padding: 1rem 2rem;
+    background-color: var(--orange);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--btn-hover-bg);
+}
+
+
+/* Footer */
+
+.footer {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer .credit {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+
+/* Highlight text selection */
+
+::selection {
+    background: var(--orange);
+    color: #fff;
+}
+
+
+/* Heading styling */
+
+.heading {
+    text-align: center;
+    padding: 2.5rem 0;
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.heading span {
+    color: var(--orange);
+    font-size: 4rem;
+}

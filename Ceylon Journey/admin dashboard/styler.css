@@ -1,0 +1,108 @@
+/* General Styles */
+
+:root {
+    --orange: #ffa500;
+    /* Replace with your desired shade of orange */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #333;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px 0;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background: #444;
+}
+
+
+/* Top Bar Styles */
+
+.top-bar {
+    margin-left: 250px;
+    /* space for sidebar */
+    padding: 15px;
+    background: #444;
+    color: #fff;
+}
+
+
+/* Main Content Styles */
+
+.main-content {
+    margin-left: 250px;
+    /* space for sidebar */
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #f2f2f2;
+}
+
+
+/* Button Styles */
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: var(--orange);
+    /* Changed to CSS variable */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: darkorange;
+    /* Optional: Slightly darker shade on hover */
+}

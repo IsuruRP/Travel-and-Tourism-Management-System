@@ -1,0 +1,369 @@
+/* Importing the 'Nunito' font from Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Defining the root variable for the orange color used throughout */
+
+ :root {
+    --orange: #ffa500;
+}
+
+
+/* General reset for all elements: setting the font family, removing margins, padding, and box sizing */
+
+* {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+
+/* Highlight text selection with orange background and white text */
+
+ ::selection {
+    background: var(--orange);
+    color: #fff;
+}
+
+
+/* Base HTML styling: set font size, prevent horizontal overflow, smooth scrolling, and scroll padding */
+
+html {
+    font-size: 62.5%;
+    /* Sets the base font size to 62.5%, making 1rem equal to 10px for easier scaling */
+    overflow-x: hidden;
+    /* Prevents horizontal scrolling if content overflows */
+    scroll-padding-top: 8rem;
+    /*6rem*/
+    /* Adds padding to the top when scrolling (useful for fixed headers) */
+    scroll-behavior: smooth;
+    /* Enables smooth scrolling when clicking anchor links */
+}
+
+section {
+    padding: 2rem 9%;
+    /* Adds padding of 2rem vertically and 9% horizontally to all sections */
+}
+
+.heading {
+    text-align: center;
+    /* Centers the text within the heading */
+    padding: 2.5rem 0;
+    /* Adds vertical padding to space the heading from surrounding content */
+}
+
+.heading span {
+    font-size: 3.5rem;
+    /* Sets the font size for text within span tags inside headings */
+    background: rgba(255, 165, 0, .2);
+    /* Adds a semi-transparent orange background */
+    color: var(--orange);
+    /* Sets the text color to orange (defined as --orange in your :root variables) */
+    border-radius: .5rem;
+    /* Rounds the corners of the background by 0.5rem */
+    padding: 0.2rem 1rem;
+    /* Adds 0.2rem vertical and 1rem horizontal padding to the span */
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.heading span:hover {
+    color: #fff;
+    /* Change color on hover */
+    background-color: var(--orange);
+    /* Background color on hover */
+    border-radius: 0.5rem;
+}
+
+.heading span.space {
+    background: none;
+    /* Removes the background for spans with the "space" class */
+}
+
+
+/* Styling for button elements: background color, padding, border, and hover effects */
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--orange);
+    color: #fff;
+    padding: .8rem 3rem;
+    border: .2rem solid var(--orange);
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    background: rgba(255, 165, 0, .2);
+    color: var(--orange);
+}
+
+
+/* Header styling: fixed at the top with dark background and spaced layout */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #333;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+
+/* Logo styling: bold text with an orange highlight */
+
+header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+header .logo span {
+    color: var(--orange);
+}
+
+
+/* Centering the navigation bar */
+header .navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Space between the links */
+}
+
+/* Navbar links: white text with hover effect to change to orange */
+
+header .navbar a {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 .8rem;
+}
+
+header .navbar a:hover {
+    color: var(--orange);
+}
+
+/* Logo styling: bold text with an orange highlight */
+header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: auto; /* Ensures the logo stays to the left */
+}
+
+header .logo span {
+    color: var(--orange);
+}
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* Menu bar icon for smaller screens */
+
+#menu-bar {
+    color: #fff;
+    border: .1rem solid #fff;
+    border-radius: .5rem;
+    font-size: 3rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Styling the login button container */
+.login-btn-container {
+    margin-left: auto;
+    /* Pushes the login button to the far right */
+}
+
+/* Styling the login button itself */
+.login-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.7rem;
+    background-color: var(--orange);
+    color: white;
+    border: 0.2rem solid var(--orange);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: rgba(255, 165, 0, 0.2);
+    color: var(--orange);
+}
+/* Rides Section: Flexbox container for package boxes */
+      
+#rides {
+    padding-top: 10rem; /* Adjust the value based on your header height */
+}
+
+.rides .box-container {
+    display: flex;
+    /* Display boxes in a row using flexbox */
+    flex-wrap: wrap;
+    /* Allow boxes to wrap to the next line if there's no space */
+    gap: 2rem;
+    /* Space between boxes */
+}
+/* Rides Section: Each individual package box styling */
+
+.rides .box-container .box {
+    flex: 1 1 30rem;
+    /* Flex-grow and flex-shrink, with a base width of 30rem */
+    border-radius: .5rem;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Hide any overflowing content */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+    /* Subtle shadow for a card-like appearance */
+}
+/* Rides Section: Styling for the image inside each package box */
+
+.rides .box-container .box img {
+    height: 25rem;
+    /* Fixed height for the images */
+    width: 100%;
+    /* Images should take the full width of the container */
+    object-fit: cover;
+    /* Maintain aspect ratio and crop overflow */
+}
+/* Rides Section: Content within each package box */
+
+.rides .box-container .box .content {
+    padding: 2rem;
+    /* Padding inside the content section */
+}
+/* Rides Section: Styling the headings (city names) in each box */
+
+.rides .box-container .box .content h3 {
+    font-size: 2rem;
+    /* Font size for the city names */
+    color: #333;
+    /* Dark grey color for the text */
+}
+/* Rides Section: Styling the location icon inside the heading */
+
+.rides .box-container .box .content h3 i {
+    color: var(--orange);
+    /* Orange color for the location icon */
+}
+/* Rides Section: Styling the description text in each box */
+
+.rides .box-container .box .content p {
+    font-size: 1.7rem;
+    /* Font size for the description */
+    color: #666;
+    /* Light grey color for the text */
+    padding: 1rem 0;
+    /* Spacing around the description */
+}
+/* Rides Section: Styling the stars for ratings in each box */
+
+.rides .box-container .box .content .stars i {
+    font-size: 1.7rem;
+    /* Font size for the stars */
+    color: var(--orange);
+    /* Orange color for the filled stars */
+}
+/* Rides Section: Styling the price section in each box */
+
+.rides .box-container .box .content .price {
+    font-size: 2rem;
+    /* Font size for the price */
+    color: #333;
+    /* Dark grey color for the price */
+    padding-top: 1rem;
+    /* Spacing above the price */
+}
+/* Rides Section: Styling the discounted price (strikethrough) */
+
+.rides .box-container .box .content .price span {
+    color: #666;
+    /* Light grey color for the old price */
+    font-size: 1.5rem;
+    /* Smaller font size for the old price */
+    text-decoration: line-through;
+    /* Strikethrough to indicate discount */
+}
+
+
+
+/* Footer */
+footer {
+    background-color: black;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    font-size: 2rem; /* Increased font size */
+    position: relative;
+    margin-bottom: 0px; /* Adds more space below the footer */
+}
+
+.footer-content {
+    margin-bottom: 20px; /* Increased space between links and bottom content */
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    margin: 0 25px; /* Increased the gap between the links */
+    font-size: 2rem; /* Increased font size of links */
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    font-size: 2rem; /* Increased font size for footer text */
+}
+
+body::after {
+    content: "";
+    display: none;
+
+}
+
+/* Adjust font size for screens smaller than 450px */
+        
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 450px) {
+    /* Reducing the root font size for smaller screens */
+    html {
+        font-size: 50%;
+        /* Scaling down the font size */
+    }
+    /* Adjusting the size of the heading text on small screens */
+    .heading span {
+        font-size: 2.5rem;
+        /* Smaller font size for headings */
+    }
+    .contact .row from .inputBox input {
+        width: 100%;
+    }
+}
+

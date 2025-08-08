@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+/* Footer */
+footer {
+    background-color: black;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    font-size: 2rem; /* Increased font size */
+    position: relative;
+    margin-bottom: 0px; /* Adds more space below the footer */
+}
+
+.footer-content {
+    margin-bottom: 20px; /* Increased space between links and bottom content */
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    margin: 0 25px; /* Increased the gap between the links */
+    font-size: 2rem; /* Increased font size of links */
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    font-size: 2rem; /* Increased font size for footer text */
+}
+
+body::after {
+    content: "";
+    display: none;
+    
+}
+
+/* Adjust font size for screens smaller than 450px */
+        
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 450px) {
+    /* Reducing the root font size for smaller screens */
+    html {
+        font-size: 50%;
+        /* Scaling down the font size */
+    }
+    /* Adjusting the size of the heading text on small screens */
+    .heading span {
+        font-size: 2.5rem;
+        /* Smaller font size for headings */
+    }
+    .contact .row from .inputBox input {
+        width: 100%;
+    }
+}
+
